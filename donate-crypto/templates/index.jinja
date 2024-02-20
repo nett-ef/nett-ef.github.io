@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M838YVVCCQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-M838YVVCCQ');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TDRGPFV5');
+	</script>
+	<!-- End Google Tag Manager -->
+	<meta name="robots" content="noindex,nofollow"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="js/default.js"></script>
+	<title>Donate Crypto</title>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDRGPFV5"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<section class="select_currency">
+	<h2>Donate Crypto</h2>
+	{% for row in screen %}
+	{% for w in row['row'] %}
+	<button class="coin_button" type="button" name="coin" value="{{ w['id'] }}" id="button-{{ w['id'] }}">
+		<div class="rounded_square">
+			<img src="{{ w['icon'] }}" alt="{{ w['name'] }}" class="coin_icon" id="icon-{{ w['id'] }}">
+		</div>
+		<br>{{ w['name'] }}
+	</button>
+	{% endfor %}
+	<br>
+	{% endfor %}
+	<div class="invite_link">
+		New to crypto? Register at: <a href="https://www.bybit.com/invite?ref=JAK052" target="_blank">https://www.bybit.com/invite?ref=JAK052</a>
+	</div>
+</section>
+<section class="make_payment">
+	<h2>&nbsp;</h2>
+	{% for row in screen %}
+	{% for w in row['row'] %}
+	<div class="wallet" id="wallet-{{ w['id'] }}">
+		<div class="info">
+			{{ w['name'] }}
+			<br>chain: {{ w['network'] }}
+		</div>
+		<img src="{{ w['qr'] }}" alt="QR code" class="qrcode">
+		<br>
+		<textarea readonly class="wallet_address">{{ w['address'] }}</textarea>
+		<div class="copied">(Copied)</div>
+	</div>
+	{% endfor %}
+	{% endfor %}
+</section>
+</body>
+</html>

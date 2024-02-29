@@ -1,13 +1,14 @@
 function copy_address(wallet) {
 	for (let c of wallet.children) {
-		if (c.className.includes('wallet_address')) {
+		copy_address(c)
+	   	if (c.className.includes('wallet_address')) {
 			c.focus();
 			c.select();
 			c.setSelectionRange(0, 99999);
 			navigator.clipboard.writeText(c.textContent);
 		}
-		if (c.className.includes('copied')) {
-			c.style.display = 'block';
+		if (c.className.includes('address_copied')) {
+			c.style.visibility = 'visible';
 		}
 	}
 }
@@ -53,11 +54,11 @@ function coin_button_click(event) {
 }
 
 window.addEventListener('load', (event) => {
+	reset_coin_buttons();
+	select_coin_button(buttons[0], true);
+	selected_button_id = buttons[0].id;
 	buttons = document.getElementsByClassName('coin_button');
 	for (let b of buttons) {
 		b.addEventListener('click', coin_button_click);
 	}
-	reset_coin_buttons();
-	select_coin_button(buttons[0], true);
-	selected_button_id = buttons[0].id;
 });

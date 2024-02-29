@@ -1,0 +1,30 @@
+.main {
+	background: #dbfbf1;
+}
+.header {
+	background: #fbe9db;
+}
+.app {
+	background: #e3dbfb;
+}
+.footer {
+	background: #fbdbdb;
+}
+.coin_button {
+	background: #e9fbdb;
+}
+.select_currency {
+	background: #b7c7ff;
+}
+.make_payment {
+	background: #ffae8b;
+}
+.wallet {
+	background: #a0ff8b;
+}
+.coin_name {
+	background: #8bc8ff;
+}
+.address_copied {
+	background: #8b9dff;
+}

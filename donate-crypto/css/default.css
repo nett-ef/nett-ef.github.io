@@ -1,87 +1,92 @@
-body {
-	display: flex;
-	justify-content: center;
-}
-.select_currency, .make_payment {
-	font-family: 'Inter';
-	background-color: white;
+.main {
+	font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	background: white;
 	color: black;
-	text-shadow: 2px 2px 4px #ddd;
-	float: left;
+}
+.header {
+	font-size: x-large;
 	line-height: 2.5;
-}
-.select_currency {
-	text-align: right;
-}
-.select_currency h2 {
-	margin-right: 0.7em;
-}
-.invite_link {
-	margin: 1em 0.9em 0 0;
-}
-.make_payment {
 	text-align: center;
-	margin-left: 2%;
-	width: 9em;
 }
 .coin_button {
 	background: none;
 	border: 0;
-	display: inline-block;
-	text-shadow: 2px 2px 4px #ddd;
-	line-height: 1.6;
-	cursor: pointer;
 	padding: 0;
-	margin: 0 0 1em 1em;
-	font-size: small;
-	width: 8em;
+	cursor: pointer;
+	white-space: nowrap;
+	font-size: 0.8em;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
 }
 .rounded_square {
 	border: 1px white solid;
-	border-radius: 12px;
-	box-shadow: 1px 1px 10px #ccc;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 1px 1px 8px #ccc;
+	width: 3em;
+	padding: 0.3em;
 	line-height: 0;
-	display: inline-block;
+	margin: 0 auto 0.3em auto;
 }
 .coin_icon {
-	height: 4em;
-	margin: 0.6em;
+	height: 3em;
 }
 .selected {
 	border: 1px #007aff solid;
 }
+.select_currency {
+	display: inline-grid;
+	grid-template-columns: repeat(5, max-content);
+	gap: 1em;
+	padding: 1em;
+}
+.app {
+	display: flex;
+	justify-content: center;
+}
+.make_payment {
+	padding: 1em 0.5em;
+	font-style: normal;
+}
 .wallet {
-	padding-top: 2em;
-	margin-bottom: 2em;
 	display: block;
 }
-.qrcode, .wallet_address {
-	font-size: small;
+.coin_name {
+	line-height: 1.5;
+	padding-bottom: 0.75em;
 }
 .qrcode {
+	width: 8em;
+	height: 8em;
+	border: 1px black solid;
+	border-radius: 8px;
+	display: inline-block;
 	vertical-align: top;
-	margin: 1.5em 0;
-	width: 8.3em;
-	height: 8.3em;
+	font-size: 0.8em;
 }
 .wallet_address {
-	border-radius: 12px;
-	width: 6.3em;
-	height: 6.3em;
-	padding: 1em;
+	border-radius: 8px;
+	width: 6.4em;
+	height: 6.4em;
+	padding: 0.8em;
+	margin: 0;
 	resize: none;
 	font-family: 'Inter';
-	border: 1px #007aff solid;
+	border: 1px black solid;
 	overflow: hidden;
+	font-size: 0.8em;
 }
 .wallet_address:focus {
+	border: 1px #007aff solid;
 	outline: none;
 }
-.copied {
-	font-size: small;
-	line-height: 1;
-	display: none;
+.copy_address {
+	display: inline-block;
+	text-align: center;
+	margin-left: 0.3em;
 }
-.info {
-	line-height: 1.5;
+.address_copied {
+	font-size: 0.8em;
+	visibility: hidden;
 }

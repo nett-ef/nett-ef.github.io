@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="noindex,nofollow"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';"/>
+	<style>
+		@font-face {
+			 font-family: 'Inter';
+			 font-style: normal;
+			 font-weight: 300;
+			 font-display: swap;
+			 src: url('fonts/Inter-Light.woff2') format('woff2');
+			 unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+	</style>
+	<link rel="stylesheet" href="css/default.css"/>
+	<script src="js/default.js"></script>
+	<link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg"/>
+	<link rel="icon" sizes="512x512" type="image/png" href="favicon-512x512.png"/>
+	<link rel="icon" sizes="192x192" type="image/png" href="favicon-192x192.png"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+	<link rel="icon" sizes="96x96" type="image/png" href="favicon-96x96.png"/>
+	<link rel="icon" sizes="64x64" type="image/png" href="favicon-64x64.png"/>
+	<link rel="icon" sizes="48x48" type="image/png" href="favicon-48x48.png"/>
+	<link rel="manifest" href="site.webmanifest"/>
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#26a17b"/>
+	<meta name="msapplication-TileColor" content="#2b5797"/>
+	<meta name="theme-color" content="#ffffff"/>
+	<title>Sampo Donation</title>
+</head>
+<body>
+<main class="main">
+	<header class="header">Donate to Theo</header>
+	<section class="app">
+		<nav class="select_currency">
+			{% for row in screen %}
+			{% for w in row['row'] %}
+			{% if w is not none %}
+			<button class="coin_button" type="button" name="coin" value="{{ w['id'] }}" id="button-{{ w['id'] }}">
+				<div class="rounded_square">
+					<img src="{{ w['icon'] }}" alt="{{ w['name'] }}" class="coin_icon" id="icon-{{ w['id'] }}">
+				</div>
+				{{ w['name'] }}
+			</button>
+			{% else %}
+			&nbsp;
+			{% endif %}
+			{% endfor %}
+			{% endfor %}
+		</nav>
+		<address class="make_payment">
+			{% for row in screen %}
+			{% for w in row['row'] %}
+			{% if w is not none %}
+			<div class="wallet" id="wallet-{{ w['id'] }}">
+				<div class="coin_name">
+					coin: {{ w['name'] }}
+					<br>network: {{ w['network'] }}
+				</div>
+				<img src="{{ w['qr'] }}" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">{{ w['address'] }}</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			{% endif %}
+			{% endfor %}
+			{% endfor %}
+		</address>
+	</section>
+</main>
+</body>
+</html>

@@ -4,115 +4,96 @@ wallets:
     coin: USDT
     network: Tron
     address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
-    icon: 'icons/usdt-tron.svg'
 
   - name: 'USDC (TRC-20)'
     coin: USDC
     network: Tron
     address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
-    icon: 'icons/usdc-tron.svg'
 
   - name: 'TRX'
     coin: TRX
     network: Tron
     address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
-    icon: 'icons/trx.svg'
 
   - name: 'USDT (BEP-20)'
     coin: USDT
     network: BNB
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdt-bnb.svg'
 
   - name: 'USDC (BEP-20)'
     coin: USDC
     network: BNB
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdc-bnb.svg'
 
   - name: 'XMR (BEP-20)'
     coin: XMR
     network: BNB
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/xmr-bnb.svg'
 
   - name: 'BNB'
     coin: BNB
     network: BNB
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/bnb.svg'
 
   - name: 'USDT (Polygon)'
     coin: USDT
     network: Polygon
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdt-polygon.svg'
 
   - name: 'USDC (Polygon)'
     coin: USDC
     network: Polygon
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdc-polygon.svg'
 
   - name: 'MATIC'
     coin: MATIC
     network: Polygon
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/matic.svg'
 
   - name: 'USDT (Solana)'
     coin: USDT
     network: Solana
     address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
-    icon: 'icons/usdt-solana.svg'
 
   - name: 'USDC (Solana)'
     coin: USDC
     network: Solana
     address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
-    icon: 'icons/usdc-solana.svg'
 
   - name: 'SOL'
     coin: SOL
     network: Solana
     address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
-    icon: 'icons/sol.svg'
 
   - name: 'USDT (ERC-20)'
     coin: USDT
     network: Ethereum
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdt-ethereum.svg'
 
   - name: 'USDC (ERC-20)'
     coin: USDC
     network: Ethereum
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/usdc-ethereum.svg'
 
   - name: 'ETH'
     coin: ETH
     network: Ethereum
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
-    icon: 'icons/eth.svg'
 
   - name: 'TON'
     coin: TON
     network: TON
     address: 'EQAEmf4FgTykBTRG9bvFl1Qer1fZj89iRjSPCC8eyY5NXCKO'
-    icon: 'icons/ton.svg'
 
   - name: 'BTC'
     coin: BTC
     network: Bitcoin
     address: '1PnFSqrKrNbem5JuZK9sVit535FSiEKoNA'
-    icon: 'icons/btc.svg'
 
   - name: 'LTC'
     coin: LTC
     network: Litecoin
     address: 'ltc1qqv5ysg4mz4z4mx0kq0nm54pedq0fefk6z674zn'
-    icon: 'icons/ltc.svg'
 
 screen:
   - row:
@@ -152,6 +133,7 @@ screen:
       network: Solana
 
   - row:
+      - null
       - coin: XMR
         network: BNB
       - coin: TON

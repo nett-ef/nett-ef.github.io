@@ -2,394 +2,502 @@
 <html>
 <head>
 	<meta name="robots" content="noindex,nofollow"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';"/>
 	<style>
 		@font-face {
-			font-family: 'Inter';
-			font-style: normal;
-			font-weight: 300;
-			font-display: swap;
-			src: url('fonts/Inter-Light.woff2') format('woff2');
-			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+			 font-family: 'Inter';
+			 font-style: normal;
+			 font-weight: 300;
+			 font-display: swap;
+			 src: url('fonts/Inter-Light.woff2') format('woff2');
+			 unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 		}
 	</style>
-	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/default.css"/>
 	<script src="js/default.js"></script>
-	<link rel="icon" type="image/svg+xml" href="icons/usdt.svg">
-	<title>Donate Crypto</title>
+	<link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg"/>
+	<link rel="icon" sizes="512x512" type="image/png" href="favicon-512x512.png"/>
+	<link rel="icon" sizes="192x192" type="image/png" href="favicon-192x192.png"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+	<link rel="icon" sizes="96x96" type="image/png" href="favicon-96x96.png"/>
+	<link rel="icon" sizes="64x64" type="image/png" href="favicon-64x64.png"/>
+	<link rel="icon" sizes="48x48" type="image/png" href="favicon-48x48.png"/>
+	<link rel="manifest" href="site.webmanifest"/>
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#26a17b"/>
+	<meta name="msapplication-TileColor" content="#2b5797"/>
+	<meta name="theme-color" content="#ffffff"/>
+	<title>Sampo Donation</title>
 </head>
 <body>
-<section class="select_currency">
-	<h2>Donate Crypto</h2>
-	
-	
-	<button class="coin_button" type="button" name="coin" value="id-trx-tron" id="button-id-trx-tron">
-		<div class="rounded_square">
-			<img src="icons/trx.svg" alt="TRX" class="coin_icon" id="icon-id-trx-tron">
-		</div>
-		<br>TRX
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-bnb-bnb" id="button-id-bnb-bnb">
-		<div class="rounded_square">
-			<img src="icons/bnb.svg" alt="BNB" class="coin_icon" id="icon-id-bnb-bnb">
-		</div>
-		<br>BNB
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-eth-ethereum" id="button-id-eth-ethereum">
-		<div class="rounded_square">
-			<img src="icons/eth.svg" alt="ETH" class="coin_icon" id="icon-id-eth-ethereum">
-		</div>
-		<br>ETH
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-matic-polygon" id="button-id-matic-polygon">
-		<div class="rounded_square">
-			<img src="icons/matic.svg" alt="MATIC" class="coin_icon" id="icon-id-matic-polygon">
-		</div>
-		<br>MATIC
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-sol-solana" id="button-id-sol-solana">
-		<div class="rounded_square">
-			<img src="icons/sol.svg" alt="SOL" class="coin_icon" id="icon-id-sol-solana">
-		</div>
-		<br>SOL
-	</button>
-	
-	<br>
-	
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdt-tron" id="button-id-usdt-tron">
-		<div class="rounded_square">
-			<img src="icons/usdt-tron.svg" alt="USDT (TRC-20)" class="coin_icon" id="icon-id-usdt-tron">
-		</div>
-		<br>USDT (TRC-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdt-bnb" id="button-id-usdt-bnb">
-		<div class="rounded_square">
-			<img src="icons/usdt-bnb.svg" alt="USDT (BEP-20)" class="coin_icon" id="icon-id-usdt-bnb">
-		</div>
-		<br>USDT (BEP-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdt-ethereum" id="button-id-usdt-ethereum">
-		<div class="rounded_square">
-			<img src="icons/usdt-ethereum.svg" alt="USDT (ERC-20)" class="coin_icon" id="icon-id-usdt-ethereum">
-		</div>
-		<br>USDT (ERC-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdt-polygon" id="button-id-usdt-polygon">
-		<div class="rounded_square">
-			<img src="icons/usdt-polygon.svg" alt="USDT (Polygon)" class="coin_icon" id="icon-id-usdt-polygon">
-		</div>
-		<br>USDT (Polygon)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdt-solana" id="button-id-usdt-solana">
-		<div class="rounded_square">
-			<img src="icons/usdt-solana.svg" alt="USDT (Solana)" class="coin_icon" id="icon-id-usdt-solana">
-		</div>
-		<br>USDT (Solana)
-	</button>
-	
-	<br>
-	
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdc-tron" id="button-id-usdc-tron">
-		<div class="rounded_square">
-			<img src="icons/usdc-tron.svg" alt="USDC (TRC-20)" class="coin_icon" id="icon-id-usdc-tron">
-		</div>
-		<br>USDC (TRC-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdc-bnb" id="button-id-usdc-bnb">
-		<div class="rounded_square">
-			<img src="icons/usdc-bnb.svg" alt="USDC (BEP-20)" class="coin_icon" id="icon-id-usdc-bnb">
-		</div>
-		<br>USDC (BEP-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdc-ethereum" id="button-id-usdc-ethereum">
-		<div class="rounded_square">
-			<img src="icons/usdc-ethereum.svg" alt="USDC (ERC-20)" class="coin_icon" id="icon-id-usdc-ethereum">
-		</div>
-		<br>USDC (ERC-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdc-polygon" id="button-id-usdc-polygon">
-		<div class="rounded_square">
-			<img src="icons/usdc-polygon.svg" alt="USDC (Polygon)" class="coin_icon" id="icon-id-usdc-polygon">
-		</div>
-		<br>USDC (Polygon)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-usdc-solana" id="button-id-usdc-solana">
-		<div class="rounded_square">
-			<img src="icons/usdc-solana.svg" alt="USDC (Solana)" class="coin_icon" id="icon-id-usdc-solana">
-		</div>
-		<br>USDC (Solana)
-	</button>
-	
-	<br>
-	
-	
-	<button class="coin_button" type="button" name="coin" value="id-xmr-bnb" id="button-id-xmr-bnb">
-		<div class="rounded_square">
-			<img src="icons/xmr-bnb.svg" alt="XMR (BEP-20)" class="coin_icon" id="icon-id-xmr-bnb">
-		</div>
-		<br>XMR (BEP-20)
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-ton-ton" id="button-id-ton-ton">
-		<div class="rounded_square">
-			<img src="icons/ton.svg" alt="TON" class="coin_icon" id="icon-id-ton-ton">
-		</div>
-		<br>TON
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-btc-bitcoin" id="button-id-btc-bitcoin">
-		<div class="rounded_square">
-			<img src="icons/btc.svg" alt="BTC" class="coin_icon" id="icon-id-btc-bitcoin">
-		</div>
-		<br>BTC
-	</button>
-	
-	<button class="coin_button" type="button" name="coin" value="id-ltc-litecoin" id="button-id-ltc-litecoin">
-		<div class="rounded_square">
-			<img src="icons/ltc.svg" alt="LTC" class="coin_icon" id="icon-id-ltc-litecoin">
-		</div>
-		<br>LTC
-	</button>
-	
-	<br>
-	
-	<div class="invite_link">
-		New to crypto? Register at: <a href="https://www.bybit.com/invite?ref=JAK052" target="_blank">https://www.bybit.com/invite?ref=JAK052</a>
-	</div>
-</section>
-<section class="make_payment">
-	<h2>&nbsp;</h2>
-	
-	
-	<div class="wallet" id="wallet-id-trx-tron">
-		<div class="info">
-			TRX
-			<br>chain: Tron
-		</div>
-		<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-bnb-bnb">
-		<div class="info">
-			BNB
-			<br>chain: BNB
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-eth-ethereum">
-		<div class="info">
-			ETH
-			<br>chain: Ethereum
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-matic-polygon">
-		<div class="info">
-			MATIC
-			<br>chain: Polygon
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-sol-solana">
-		<div class="info">
-			SOL
-			<br>chain: Solana
-		</div>
-		<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	
-	
-	<div class="wallet" id="wallet-id-usdt-tron">
-		<div class="info">
-			USDT (TRC-20)
-			<br>chain: Tron
-		</div>
-		<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdt-bnb">
-		<div class="info">
-			USDT (BEP-20)
-			<br>chain: BNB
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdt-ethereum">
-		<div class="info">
-			USDT (ERC-20)
-			<br>chain: Ethereum
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdt-polygon">
-		<div class="info">
-			USDT (Polygon)
-			<br>chain: Polygon
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdt-solana">
-		<div class="info">
-			USDT (Solana)
-			<br>chain: Solana
-		</div>
-		<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	
-	
-	<div class="wallet" id="wallet-id-usdc-tron">
-		<div class="info">
-			USDC (TRC-20)
-			<br>chain: Tron
-		</div>
-		<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdc-bnb">
-		<div class="info">
-			USDC (BEP-20)
-			<br>chain: BNB
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdc-ethereum">
-		<div class="info">
-			USDC (ERC-20)
-			<br>chain: Ethereum
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdc-polygon">
-		<div class="info">
-			USDC (Polygon)
-			<br>chain: Polygon
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-usdc-solana">
-		<div class="info">
-			USDC (Solana)
-			<br>chain: Solana
-		</div>
-		<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	
-	
-	<div class="wallet" id="wallet-id-xmr-bnb">
-		<div class="info">
-			XMR (BEP-20)
-			<br>chain: BNB
-		</div>
-		<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-ton-ton">
-		<div class="info">
-			TON
-			<br>chain: TON
-		</div>
-		<img src="qr/eqaem-nxcko.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">EQAEmf4FgTykBTRG9bvFl1Qer1fZj89iRjSPCC8eyY5NXCKO</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-btc-bitcoin">
-		<div class="info">
-			BTC
-			<br>chain: Bitcoin
-		</div>
-		<img src="qr/1pnfs-ekona.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">1PnFSqrKrNbem5JuZK9sVit535FSiEKoNA</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	<div class="wallet" id="wallet-id-ltc-litecoin">
-		<div class="info">
-			LTC
-			<br>chain: Litecoin
-		</div>
-		<img src="qr/ltc1q-674zn.svg" alt="QR code" class="qrcode">
-		<br>
-		<textarea readonly class="wallet_address">ltc1qqv5ysg4mz4z4mx0kq0nm54pedq0fefk6z674zn</textarea>
-		<div class="copied">(Copied)</div>
-	</div>
-	
-	
-</section>
+<main class="main">
+	<header class="header">Donate to Theo</header>
+	<section class="app">
+		<nav class="select_currency">
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-trx-tron" id="button-id-trx-tron">
+				<div class="rounded_square">
+					<img src="icons/id-trx-tron.svg" alt="TRX" class="coin_icon" id="icon-id-trx-tron">
+				</div>
+				TRX
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-bnb-bnb" id="button-id-bnb-bnb">
+				<div class="rounded_square">
+					<img src="icons/id-bnb-bnb.svg" alt="BNB" class="coin_icon" id="icon-id-bnb-bnb">
+				</div>
+				BNB
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-eth-ethereum" id="button-id-eth-ethereum">
+				<div class="rounded_square">
+					<img src="icons/id-eth-ethereum.svg" alt="ETH" class="coin_icon" id="icon-id-eth-ethereum">
+				</div>
+				ETH
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-matic-polygon" id="button-id-matic-polygon">
+				<div class="rounded_square">
+					<img src="icons/id-matic-polygon.svg" alt="MATIC" class="coin_icon" id="icon-id-matic-polygon">
+				</div>
+				MATIC
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-sol-solana" id="button-id-sol-solana">
+				<div class="rounded_square">
+					<img src="icons/id-sol-solana.svg" alt="SOL" class="coin_icon" id="icon-id-sol-solana">
+				</div>
+				SOL
+			</button>
+			
+			
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdt-tron" id="button-id-usdt-tron">
+				<div class="rounded_square">
+					<img src="icons/id-usdt-tron.svg" alt="USDT (TRC-20)" class="coin_icon" id="icon-id-usdt-tron">
+				</div>
+				USDT (TRC-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdt-bnb" id="button-id-usdt-bnb">
+				<div class="rounded_square">
+					<img src="icons/id-usdt-bnb.svg" alt="USDT (BEP-20)" class="coin_icon" id="icon-id-usdt-bnb">
+				</div>
+				USDT (BEP-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdt-ethereum" id="button-id-usdt-ethereum">
+				<div class="rounded_square">
+					<img src="icons/id-usdt-ethereum.svg" alt="USDT (ERC-20)" class="coin_icon" id="icon-id-usdt-ethereum">
+				</div>
+				USDT (ERC-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdt-polygon" id="button-id-usdt-polygon">
+				<div class="rounded_square">
+					<img src="icons/id-usdt-polygon.svg" alt="USDT (Polygon)" class="coin_icon" id="icon-id-usdt-polygon">
+				</div>
+				USDT (Polygon)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdt-solana" id="button-id-usdt-solana">
+				<div class="rounded_square">
+					<img src="icons/id-usdt-solana.svg" alt="USDT (Solana)" class="coin_icon" id="icon-id-usdt-solana">
+				</div>
+				USDT (Solana)
+			</button>
+			
+			
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdc-tron" id="button-id-usdc-tron">
+				<div class="rounded_square">
+					<img src="icons/id-usdc-tron.svg" alt="USDC (TRC-20)" class="coin_icon" id="icon-id-usdc-tron">
+				</div>
+				USDC (TRC-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdc-bnb" id="button-id-usdc-bnb">
+				<div class="rounded_square">
+					<img src="icons/id-usdc-bnb.svg" alt="USDC (BEP-20)" class="coin_icon" id="icon-id-usdc-bnb">
+				</div>
+				USDC (BEP-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdc-ethereum" id="button-id-usdc-ethereum">
+				<div class="rounded_square">
+					<img src="icons/id-usdc-ethereum.svg" alt="USDC (ERC-20)" class="coin_icon" id="icon-id-usdc-ethereum">
+				</div>
+				USDC (ERC-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdc-polygon" id="button-id-usdc-polygon">
+				<div class="rounded_square">
+					<img src="icons/id-usdc-polygon.svg" alt="USDC (Polygon)" class="coin_icon" id="icon-id-usdc-polygon">
+				</div>
+				USDC (Polygon)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-usdc-solana" id="button-id-usdc-solana">
+				<div class="rounded_square">
+					<img src="icons/id-usdc-solana.svg" alt="USDC (Solana)" class="coin_icon" id="icon-id-usdc-solana">
+				</div>
+				USDC (Solana)
+			</button>
+			
+			
+			
+			
+			
+			&nbsp;
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-xmr-bnb" id="button-id-xmr-bnb">
+				<div class="rounded_square">
+					<img src="icons/id-xmr-bnb.svg" alt="XMR (BEP-20)" class="coin_icon" id="icon-id-xmr-bnb">
+				</div>
+				XMR (BEP-20)
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-ton-ton" id="button-id-ton-ton">
+				<div class="rounded_square">
+					<img src="icons/id-ton-ton.svg" alt="TON" class="coin_icon" id="icon-id-ton-ton">
+				</div>
+				TON
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-btc-bitcoin" id="button-id-btc-bitcoin">
+				<div class="rounded_square">
+					<img src="icons/id-btc-bitcoin.svg" alt="BTC" class="coin_icon" id="icon-id-btc-bitcoin">
+				</div>
+				BTC
+			</button>
+			
+			
+			
+			<button class="coin_button" type="button" name="coin" value="id-ltc-litecoin" id="button-id-ltc-litecoin">
+				<div class="rounded_square">
+					<img src="icons/id-ltc-litecoin.svg" alt="LTC" class="coin_icon" id="icon-id-ltc-litecoin">
+				</div>
+				LTC
+			</button>
+			
+			
+			
+		</nav>
+		<address class="make_payment">
+			
+			
+			
+			<div class="wallet" id="wallet-id-trx-tron">
+				<div class="coin_name">
+					coin: TRX
+					<br>network: Tron
+				</div>
+				<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-bnb-bnb">
+				<div class="coin_name">
+					coin: BNB
+					<br>network: BNB
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-eth-ethereum">
+				<div class="coin_name">
+					coin: ETH
+					<br>network: Ethereum
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-matic-polygon">
+				<div class="coin_name">
+					coin: MATIC
+					<br>network: Polygon
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-sol-solana">
+				<div class="coin_name">
+					coin: SOL
+					<br>network: Solana
+				</div>
+				<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdt-tron">
+				<div class="coin_name">
+					coin: USDT (TRC-20)
+					<br>network: Tron
+				</div>
+				<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdt-bnb">
+				<div class="coin_name">
+					coin: USDT (BEP-20)
+					<br>network: BNB
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdt-ethereum">
+				<div class="coin_name">
+					coin: USDT (ERC-20)
+					<br>network: Ethereum
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdt-polygon">
+				<div class="coin_name">
+					coin: USDT (Polygon)
+					<br>network: Polygon
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdt-solana">
+				<div class="coin_name">
+					coin: USDT (Solana)
+					<br>network: Solana
+				</div>
+				<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdc-tron">
+				<div class="coin_name">
+					coin: USDC (TRC-20)
+					<br>network: Tron
+				</div>
+				<img src="qr/tjbwy-9rcbw.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdc-bnb">
+				<div class="coin_name">
+					coin: USDC (BEP-20)
+					<br>network: BNB
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdc-ethereum">
+				<div class="coin_name">
+					coin: USDC (ERC-20)
+					<br>network: Ethereum
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdc-polygon">
+				<div class="coin_name">
+					coin: USDC (Polygon)
+					<br>network: Polygon
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-usdc-solana">
+				<div class="coin_name">
+					coin: USDC (Solana)
+					<br>network: Solana
+				</div>
+				<img src="qr/9mdic-dkv59.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			<div class="wallet" id="wallet-id-xmr-bnb">
+				<div class="coin_name">
+					coin: XMR (BEP-20)
+					<br>network: BNB
+				</div>
+				<img src="qr/0x6bb-99dc9.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-ton-ton">
+				<div class="coin_name">
+					coin: TON
+					<br>network: TON
+				</div>
+				<img src="qr/eqaem-nxcko.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">EQAEmf4FgTykBTRG9bvFl1Qer1fZj89iRjSPCC8eyY5NXCKO</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-btc-bitcoin">
+				<div class="coin_name">
+					coin: BTC
+					<br>network: Bitcoin
+				</div>
+				<img src="qr/1pnfs-ekona.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">1PnFSqrKrNbem5JuZK9sVit535FSiEKoNA</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+			<div class="wallet" id="wallet-id-ltc-litecoin">
+				<div class="coin_name">
+					coin: LTC
+					<br>network: Litecoin
+				</div>
+				<img src="qr/ltc1q-674zn.svg" alt="QR code" class="qrcode">
+				<div class="copy_address">
+					<textarea readonly class="wallet_address">ltc1qqv5ysg4mz4z4mx0kq0nm54pedq0fefk6z674zn</textarea>
+					<div class="address_copied">(Copied)</div>
+				</div>
+			</div>
+			
+			
+			
+		</address>
+	</section>
+</main>
 </body>
 </html>

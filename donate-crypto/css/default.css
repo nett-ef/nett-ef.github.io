@@ -1,12 +1,12 @@
 body {
-	font-family: 'Inter';
-	background-color: white;
-	color: black;
-	text-shadow: 2px 2px 4px #ddd;
 	display: flex;
 	justify-content: center;
 }
 .select_currency, .make_payment {
+	font-family: 'Inter';
+	background-color: white;
+	color: black;
+	text-shadow: 2px 2px 4px #ddd;
 	float: left;
 	line-height: 2.5;
 }

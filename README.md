@@ -1,10 +1,10 @@
 ## donate-crypto
 A crypto donations script for GitHub Pages.
 
-Live: [https://nett-ef.github.io/donate-crypto](https://nett-ef.github.io/donate-crypto)
+Live: [https://www.darksciencelabs.com/donate-crypto/](https://www.darksciencelabs.com/donate-crypto/)
 
 ### How-to make your own page
-1. Set wallets in _config.yaml_, replace Google Analytics ID in _templates/index.jinja_
+1. Set wallets in _config.yaml_
 2. Install [Python](https://www.python.org) and [Poetry](https://python-poetry.org)
 3. `% poetry install --with=dev`
 4. Export environment variables (_local.env.example_)

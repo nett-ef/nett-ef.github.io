@@ -41,7 +41,7 @@ def enrich_config_inplace(config: dict):
 
 def render_html(config: dict) -> str:
     env = Environment(
-        loader=FileSystemLoader('templates'),
+        loader=FileSystemLoader(os.environ['TEMPLATES_DIR']),
         autoescape=select_autoescape()
     )
 

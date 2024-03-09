@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta name="robots" content="noindex,nofollow"/>
-	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';"/>
-	<link rel="stylesheet" href="css/default.css"/>
+	<meta name="robots" content="noindex,nofollow">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
+	<link rel="stylesheet" href="css/default.css">
 	<script src="js/default.js"></script>
 	<style>
 		@font-face {
@@ -22,17 +22,17 @@
 			}
 		</style>
 	</noscript>
-	<link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg"/>
-	<link rel="icon" sizes="512x512" type="image/png" href="favicon-512x512.png"/>
-	<link rel="icon" sizes="192x192" type="image/png" href="favicon-192x192.png"/>
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
-	<link rel="icon" sizes="96x96" type="image/png" href="favicon-96x96.png"/>
-	<link rel="icon" sizes="64x64" type="image/png" href="favicon-64x64.png"/>
-	<link rel="icon" sizes="48x48" type="image/png" href="favicon-48x48.png"/>
-	<link rel="manifest" href="site.webmanifest"/>
-	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#26a17b"/>
-	<meta name="msapplication-TileColor" content="#2b5797"/>
-	<meta name="theme-color" content="#ffffff"/>
+	<link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg">
+	<link rel="icon" sizes="512x512" type="image/png" href="favicon-512x512.png">
+	<link rel="icon" sizes="192x192" type="image/png" href="favicon-192x192.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" sizes="96x96" type="image/png" href="favicon-96x96.png">
+	<link rel="icon" sizes="64x64" type="image/png" href="favicon-64x64.png">
+	<link rel="icon" sizes="48x48" type="image/png" href="favicon-48x48.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#26a17b">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
 	<title>Donate Crypto</title>
 </head>
 <body>
@@ -43,9 +43,9 @@
 		{% for w in row['row'] %}
 		{% if w is not none %}
 		<button id="button-{{ w['id'] }}" class="coin_button" type="button">
-			<div class="rounded_square">
+			<span class="rounded_square">
 				<img src="{{ w['icon'] }}" class="coin_icon" alt="Coin icon">
-			</div>
+			</span>
 			{{ w['name'] }}
 		</button>
 		{% else %}

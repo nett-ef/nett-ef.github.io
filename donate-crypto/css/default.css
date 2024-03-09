@@ -1,12 +1,23 @@
-.main {
-	font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+body {
+	margin: 0;
 	background: white;
 	color: black;
+	font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 .header {
 	font-size: x-large;
-	line-height: 2.5;
 	text-align: center;
+	padding: 1em 0.5em 0.5em;
+}
+.main {
+	display: flex;
+	justify-content: center;
+}
+.select_currency {
+	display: inline-grid;
+	grid-template-columns: repeat(5, max-content);
+	gap: 0.5em;
+	padding: 0.5em;
 }
 .coin_button {
 	background: none;
@@ -20,14 +31,14 @@
 	line-height: 1.5;
 }
 .rounded_square {
-	border: 1px white solid;
 	border-radius: 8px;
 	background: #fff;
-	box-shadow: 1px 1px 8px #ccc;
 	width: 3em;
-	padding: 0.3em;
+	padding: 0.5em;
 	line-height: 0;
-	margin: 0 auto 0.3em auto;
+	margin: 0 auto 0.3em;
+	box-shadow: 1px 1px 8px #ccc;
+	border: 1px #fff solid;
 }
 .coin_icon {
 	height: 3em;
@@ -35,58 +46,51 @@
 .selected {
 	border: 1px #007aff solid;
 }
-.select_currency {
-	display: inline-grid;
-	grid-template-columns: repeat(5, max-content);
-	gap: 1em;
-	padding: 1em;
+.wallet_address:focus {
+	border: 1px #007aff solid;
+	outline: none;
 }
-.app {
-	display: flex;
-	justify-content: center;
-}
+
 .make_payment {
-	padding: 1em 0.5em;
+	padding: 0.5em;
 	font-style: normal;
 }
 .wallet {
-	display: block;
+	display: none;
 }
 .coin_name {
 	line-height: 1.5;
 	padding-bottom: 0.75em;
 }
+
+.qrcode, .wallet_address {
+    border-radius: 8px;
+    font-size: 0.8em;
+	border: 1px #555 solid;
+}
 .qrcode {
 	width: 8em;
 	height: 8em;
-	border: 1px black solid;
-	border-radius: 8px;
 	display: inline-block;
 	vertical-align: top;
-	font-size: 0.8em;
 }
 .wallet_address {
-	border-radius: 8px;
 	width: 6.4em;
 	height: 6.4em;
 	padding: 0.8em;
 	margin: 0;
 	resize: none;
 	font-family: 'Inter';
-	border: 1px black solid;
 	overflow: hidden;
-	font-size: 0.8em;
-}
-.wallet_address:focus {
-	border: 1px #007aff solid;
-	outline: none;
 }
 .copy_address {
 	display: inline-block;
+	line-height: 0;
 	text-align: center;
 	margin-left: 0.3em;
 }
 .address_copied {
 	font-size: 0.8em;
+	line-height: 2;
 	visibility: hidden;
 }

@@ -1,7 +1,7 @@
 ## donate-crypto
 A crypto donations script for GitHub Pages.
 
-Live: [https://www.darksciencelabs.com/donate-crypto/](https://www.darksciencelabs.com/donate-crypto/)
+Live: [https://nett-ef.github.io/donate-crypto/](https://nett-ef.github.io/donate-crypto/)
 
 ### How-to make your own page
 1. Install [Poetry](https://python-poetry.org)
@@ -12,5 +12,4 @@ Live: [https://www.darksciencelabs.com/donate-crypto/](https://www.darksciencela
 6. Run _make_qr.py_ followed by _make_index.py_
 
 ### Branches
-- **main** - live Web page
-- **donate-crypto** - clean commit history
+- **donate-crypto** - stable

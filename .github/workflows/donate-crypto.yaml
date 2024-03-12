@@ -1,7 +1,7 @@
 name: donate-crypto
+run-name: "${{ github.workflow }} - ${{ github.event.head_commit.message }}"
 
 on:
-  # Runs on pushes to the specified branches
   push:
     branches:
       - 'donate-crypto*'
@@ -11,12 +11,12 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# However, do NOT cancel in-progress runs
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -25,16 +25,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CONFIG: donate-crypto/py/config.yaml
-      TEMPLATES_DIR: donate-crypto/py/templates
       HTML_OUTPUT_DIR: donate-crypto
+      CONFIG: donate-crypto/config.yaml
+      TEMPLATES_DIR: donate-crypto/templates
       QR_DIR: qr
       ICONS_DIR: icons
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
       - name: Set up Python
         id: setup-python
         uses: actions/setup-python@v5
@@ -59,6 +57,10 @@ jobs:
         run: poetry run python donate-crypto/py/make_qr.py
       - name: Make index.html
         run: poetry run python donate-crypto/py/make_index.py
+      - name: Commit changes back to the repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Build README with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

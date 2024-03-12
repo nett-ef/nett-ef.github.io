@@ -4,13 +4,12 @@ A crypto donations script for GitHub Pages.
 Live: [https://nett-ef.github.io/donate-crypto/](https://nett-ef.github.io/donate-crypto/)
 
 ### How-to make your own page
-1. Set wallets in _donate-crypto/py/config.yaml_
-2. Change header text in _donate-crypto/py/templates/index.jinja_
+1. Set wallets in _config.yaml_
+2. Change header text in _templates/index.jinja_
 3. Build and deploy
 
 ### Building with CI
-1. Fork the repository
-2. Run GitHub Actions workflow: donate-crypto
+Run GitHub Actions workflow: donate-crypto. This will run _make*_ scripts and commit the changes.
 
 ### Building locally
 1. Install `pipx`:
@@ -34,18 +33,20 @@ Live: [https://nett-ef.github.io/donate-crypto/](https://nett-ef.github.io/donat
     ```
     % pipx install poetry
     % poetry install --no-root --only=donate-crypto
-    % cd donate-crypto/py
    
     # Export environment variables
     % set -a
-    % source local.env
+    % source donate-crypto/py/local.env
    
     # Make QR codes
-    % poetry run python make_qr.py
+    % poetry run python donate-crypto/py/make_qr.py
    
     # Make index.html
-    % poetry run python make_index.py
+    % poetry run python donate-crypto/py/make_index.py
     ```
 
 ### Branches
-- **donate-crypto** - stable
+- [donate-crypto](https://github.com/nett-ef/nett-ef.github.io/tree/donate-crypto) - Live Web page
+- [main](https://github.com/nett-ef/nett-ef.github.io/tree/main) - default GitHub Pages branch
+
+

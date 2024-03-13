@@ -1,5 +1,10 @@
 ---
 wallets:
+  - name: 'TRX'
+    coin: TRX
+    network: Tron
+    address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
+
   - name: 'USDT (TRC-20)'
     coin: USDT
     network: Tron
@@ -10,10 +15,10 @@ wallets:
     network: Tron
     address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
 
-  - name: 'TRX'
-    coin: TRX
-    network: Tron
-    address: 'TJBWYj41pygjd9BiEbuAnWgdbAtg49RcBW'
+  - name: 'BNB (BEP-20)'
+    coin: BNB
+    network: BNB
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
   - name: 'USDT (BEP-20)'
     coin: USDT
@@ -30,9 +35,9 @@ wallets:
     network: BNB
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
-  - name: 'BNB'
-    coin: BNB
-    network: BNB
+  - name: 'MATIC (Polygon)'
+    coin: MATIC
+    network: Polygon
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
   - name: 'USDT (Polygon)'
@@ -45,10 +50,10 @@ wallets:
     network: Polygon
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
-  - name: 'MATIC'
-    coin: MATIC
-    network: Polygon
-    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+  - name: 'SOL (Solana)'
+    coin: SOL
+    network: Solana
+    address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
 
   - name: 'USDT (Solana)'
     coin: USDT
@@ -60,10 +65,10 @@ wallets:
     network: Solana
     address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
 
-  - name: 'SOL'
-    coin: SOL
-    network: Solana
-    address: '9mDiCpp6XPYHYpiDzVLqk7sfSSPoNHGSDd9jfLCdkV59'
+  - name: 'ETH (ERC-20)'
+    coin: ETH
+    network: Ethereum
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
   - name: 'USDT (ERC-20)'
     coin: USDT
@@ -75,9 +80,34 @@ wallets:
     network: Ethereum
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
-  - name: 'ETH'
+  - name: 'ETH (Arbitrum)'
     coin: ETH
-    network: Ethereum
+    network: Arbitrum
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+
+  - name: 'USDT (Arbitrum)'
+    coin: USDT
+    network: Arbitrum
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+
+  - name: 'USDC (Arbitrum)'
+    coin: USDC
+    network: Arbitrum
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+
+  - name: 'ETH (Optimism)'
+    coin: ETH
+    network: Optimism
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+
+  - name: 'USDT (Optimism)'
+    coin: USDT
+    network: Optimism
+    address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
+
+  - name: 'USDC (Optimism)'
+    coin: USDC
+    network: Optimism
     address: '0x6Bb095111A0D9f4125a1CDC1ea5a0902fE699Dc9'
 
   - name: 'TON'
@@ -97,16 +127,20 @@ wallets:
 
 screen:
   - row:
-      - coin: TRX
-        network: Tron
-      - coin: BNB
-        network: BNB
-      - coin: ETH
-        network: Ethereum
-      - coin: MATIC
-        network: Polygon
-      - coin: SOL
-        network: Solana
+    - coin: TRX
+      network: Tron
+    - coin: BNB
+      network: BNB
+    - coin: ETH
+      network: Ethereum
+    - coin: ETH
+      network: Arbitrum
+    - coin: ETH
+      network: Optimism
+    - coin: MATIC
+      network: Polygon
+    - coin: SOL
+      network: Solana
 
   - row:
     - coin: USDT
@@ -115,6 +149,10 @@ screen:
       network: BNB
     - coin: USDT
       network: Ethereum
+    - coin: USDT
+      network: Arbitrum
+    - coin: USDT
+      network: Optimism
     - coin: USDT
       network: Polygon
     - coin: USDT
@@ -128,18 +166,24 @@ screen:
     - coin: USDC
       network: Ethereum
     - coin: USDC
+      network: Arbitrum
+    - coin: USDC
+      network: Optimism
+    - coin: USDC
       network: Polygon
     - coin: USDC
       network: Solana
 
   - row:
-      - null
-      - coin: XMR
-        network: BNB
-      - coin: TON
-        network: TON
-      - coin: BTC
-        network: Bitcoin
-      - coin: LTC
-        network: Litecoin
+    - coin: TON
+      network: TON
+    - coin: XMR
+      network: BNB
+    - coin: BTC
+      network: Bitcoin
+    - coin: LTC
+      network: Litecoin
+    - null
+    - null
+    - null
 ...

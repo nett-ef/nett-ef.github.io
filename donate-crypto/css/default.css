@@ -4,20 +4,18 @@
 	--button-background: white;
 	--button-shadow: #ccc;
 	--button-selection: #007aff;
-	--wallet-selection: #007aff;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background: black;
 		--text: #f1f1f1;
-		--button-background: black;
-		--button-shadow: #555;
+		--button-background: #222;
+		--button-shadow: #000;
 		--button-selection: #007aff;
-		--wallet-selection: #f1f1f1;
 	}
 }
 
-body {
+html, body {
 	margin: 0;
 	background: var(--background);
 	color: var(--text);
@@ -34,7 +32,8 @@ body {
 }
 .select_currency {
 	display: inline-grid;
-	grid-template-columns: repeat(5, max-content);
+	grid-template-columns: repeat(7, 7em);
+	grid-template-rows: repeat(4, 7em);
 	gap: 0.5em;
 	padding: 0.5em;
 }
@@ -68,7 +67,6 @@ body {
 	border: 1px var(--button-selection) solid;
 }
 .wallet_address:focus {
-	border: 1px var(--wallet-selection) solid;
 	outline: none;
 }
 
@@ -81,7 +79,7 @@ body {
 }
 .coin_name {
 	line-height: 1.5;
-	padding-bottom: 0.75em;
+	padding: 1em 0;
 }
 
 .qrcode, .wallet_address {

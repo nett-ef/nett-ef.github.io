@@ -1,10 +1,16 @@
-function copy_wallet_address(wallet_id) {
+function get_wallet_address(wallet_id) {
 	const query = `#${wallet_id} .copy_address .wallet_address`;
-	const address = document.querySelector(query);
-	address.focus();
-	address.select();
-	address.setSelectionRange(0, 99999);
-	navigator.clipboard.writeText(address.textContent);
+	return document.querySelector(query);
+}
+
+function copy_to_clipboard(text) {
+	navigator.clipboard.writeText(text);
+}
+
+function select_text(elem) {
+	elem.focus();
+	elem.select();
+	elem.setSelectionRange(0, 99999);
 }
 
 function show_copied_label(wallet_id) {
@@ -45,7 +51,9 @@ function coin_button_click(event) {
 	}
 	select_coin_button(button.id);
 	const wallet_id = get_wallet_id(button.id);
-	copy_wallet_address(wallet_id);
+	const address = get_wallet_address(wallet_id);
+	select_text(address);
+	copy_to_clipboard(address.textContent);
 	show_copied_label(wallet_id);
 }
 
@@ -54,5 +62,8 @@ window.addEventListener('load', (event) => {
 	for (const b of buttons) {
 		b.addEventListener('click', coin_button_click);
 	}
-	select_coin_button(buttons[0].id);
+	const button_id = buttons[0].id;
+	select_coin_button(button_id);
+	const address = get_wallet_address(get_wallet_id(button_id));
+	select_text(address);
 });

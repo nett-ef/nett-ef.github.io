@@ -60,13 +60,14 @@
 		{% for w in row['row'] %}
 		{% if w is not none %}
 		<div class="wallet" id="wallet-{{ w['id'] }}">
-			<div class="coin_name">
+			<label for="address-{{ w['id'] }}" class="coin_name">
 				coin: {{ w['name'] }}
 				<br>network: {{ w['network'] }}
-			</div>
+			</label>
+			<br>
 			<img src="{{ w['qr'] }}" alt="QR code" class="qrcode">
 			<div class="copy_address">
-				<textarea readonly class="wallet_address">{{ w['address'] }}</textarea>
+				<textarea id="address-{{ w['id'] }}" readonly class="wallet_address">{{ w['address'] }}</textarea>
 				<div class="address_copied">(Copied)</div>
 			</div>
 		</div>

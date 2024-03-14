@@ -15,6 +15,34 @@
 	}
 }
 
+.main {
+	display: flex;
+	justify-content: center;
+}
+.coin_name {
+	line-height: 1.5;
+	display: inline-block;
+	padding: 0 0 1em 1em;
+}
+.qrcode {
+	width: 8em;
+	height: 8em;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 1.25em;
+}
+@media screen and (max-width: 1100px) {
+	.main {
+		display: block;
+	}
+	.coin_name {
+		padding: 3em 0 1em 1.5em;
+	}
+	.qrcode {
+		margin-left: 1.75em;
+	}
+}
+
 html, body {
 	margin: 0;
 	background: var(--background);
@@ -26,16 +54,11 @@ html, body {
 	text-align: center;
 	padding: 1em 0.5em 0.5em;
 }
-.main {
-	display: flex;
-	justify-content: center;
-}
 .select_currency {
-	display: inline-grid;
-	grid-template-columns: repeat(7, 7em);
-	grid-template-rows: repeat(4, 7em);
-	gap: 0.5em;
-	padding: 0.5em;
+	display: grid;
+	grid-template-columns: repeat(7, 6.7em);
+	grid-template-rows: repeat(4, 6.7em);
+	gap: 0.7em;
 }
 .coin_button {
 	border: 0;
@@ -44,7 +67,7 @@ html, body {
 	white-space: nowrap;
 	font-size: 0.8em;
 	font-weight: 300;
-	line-height: 1.5;
+	line-height: 2;
 	color: var(--text);
 	background: none;
 	-webkit-font-smoothing: antialiased;
@@ -52,8 +75,8 @@ html, body {
 .rounded_square {
 	display: block;
 	border-radius: 8px;
-	width: 3em;
-	padding: 0.5em;
+	width: 4.5em;
+	padding: 0.7em;
 	line-height: 0;
 	margin: 0 auto 0.3em;
 	background: var(--button-background);
@@ -61,7 +84,7 @@ html, body {
 	box-shadow: 1px 1px 8px var(--button-shadow);
 }
 .coin_icon {
-	height: 3em;
+	height: 4.5em;
 }
 .selected {
 	border: 1px var(--button-selection) solid;
@@ -71,15 +94,11 @@ html, body {
 }
 
 .make_payment {
-	padding: 0.5em;
 	font-style: normal;
 }
 .wallet {
 	display: none;
-}
-.coin_name {
-	line-height: 1.5;
-	padding: 1em 0;
+	white-space: nowrap;
 }
 
 .qrcode, .wallet_address {
@@ -88,12 +107,6 @@ html, body {
 	border: 1px var(--text) solid;
 	background: white;
 	color: black;
-}
-.qrcode {
-	width: 8em;
-	height: 8em;
-	display: inline-block;
-	vertical-align: top;
 }
 .wallet_address {
 	width: 6.4em;

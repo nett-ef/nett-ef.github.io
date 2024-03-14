@@ -3,20 +3,19 @@ function get_wallet_address(wallet_id) {
 	return document.querySelector(query);
 }
 
-function copy_to_clipboard(text) {
-	navigator.clipboard.writeText(text);
-}
-
 function select_text(elem) {
-	elem.focus();
 	elem.select();
 	elem.setSelectionRange(0, 99999);
 }
 
-function show_copied_label(wallet_id) {
+function get_copied_label(wallet_id) {
 	const query = `#${wallet_id} .copy_address .address_copied`;
-	const label = document.querySelector(query);
-	label.style.visibility = 'visible';
+	return document.querySelector(query);
+}
+
+function get_coin_name(wallet_id) {
+	const query = `#${wallet_id} .coin_name`;
+	return document.querySelector(query);
 }
 
 function get_wallet_id(button_id) {
@@ -53,8 +52,11 @@ function coin_button_click(event) {
 	const wallet_id = get_wallet_id(button.id);
 	const address = get_wallet_address(wallet_id);
 	select_text(address);
-	copy_to_clipboard(address.textContent);
-	show_copied_label(wallet_id);
+	navigator.clipboard.writeText(address.textContent);
+	const label = get_copied_label(wallet_id);
+	label.style.visibility = 'visible';
+	const coin_name = get_coin_name(wallet_id);
+	coin_name.scrollIntoView(true);
 }
 
 window.addEventListener('load', (event) => {

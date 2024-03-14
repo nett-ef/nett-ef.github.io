@@ -3,11 +3,6 @@ function get_wallet_address(wallet_id) {
 	return document.querySelector(query);
 }
 
-function select_text(elem) {
-	elem.select();
-	elem.setSelectionRange(0, 99999);
-}
-
 function get_copied_label(wallet_id) {
 	const query = `#${wallet_id} .copy_address .address_copied`;
 	return document.querySelector(query);
@@ -51,7 +46,6 @@ function coin_button_click(event) {
 	select_coin_button(button.id);
 	const wallet_id = get_wallet_id(button.id);
 	const address = get_wallet_address(wallet_id);
-	select_text(address);
 	navigator.clipboard.writeText(address.textContent);
 	const label = get_copied_label(wallet_id);
 	label.style.visibility = 'visible';
@@ -66,6 +60,4 @@ window.addEventListener('load', (event) => {
 	}
 	const button_id = buttons[0].id;
 	select_coin_button(button_id);
-	const address = get_wallet_address(get_wallet_id(button_id));
-	select_text(address);
 });
